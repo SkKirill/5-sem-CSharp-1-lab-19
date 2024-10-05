@@ -1,0 +1,16 @@
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable-Mark.csproj.GenerateResource.cache
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable-Mark.GeneratedMSBuildEditorConfig.editorconfig
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable-Mark.AssemblyInfoInputs.cache
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable-Mark.AssemblyInfo.cs
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable-Mark.csproj.CoreCompileInputs.cache
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\bin\Debug\net8.0-windows\Comparable-Mark.exe
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\bin\Debug\net8.0-windows\Comparable-Mark.deps.json
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\bin\Debug\net8.0-windows\Comparable-Mark.runtimeconfig.json
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\bin\Debug\net8.0-windows\Comparable-Mark.dll
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\bin\Debug\net8.0-windows\Comparable-Mark.pdb
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable-Mark.dll
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\refint\Comparable-Mark.dll
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable-Mark.pdb
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable-Mark.genruntimeconfig.cache
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\ref\Comparable-Mark.dll
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable_Mark.Forms.MainForm.resources
