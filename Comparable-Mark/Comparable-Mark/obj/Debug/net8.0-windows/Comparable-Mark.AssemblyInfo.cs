@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Comparable-Mark")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2dd2f4e52603462336181395a30eef0c5b8bd4c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Comparable-Mark")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Comparable-Mark")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

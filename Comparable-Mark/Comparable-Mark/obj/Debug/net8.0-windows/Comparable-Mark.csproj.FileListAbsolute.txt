@@ -14,3 +14,6 @@ D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\
 D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable-Mark.genruntimeconfig.cache
 D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\ref\Comparable-Mark.dll
 D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable_Mark.Forms.MainForm.resources
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable-Mark.sourcelink.json
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable_Mark.Forms.AddStudentForm.resources
+D:\VSU-Labs-git\5-sem\CSharp\1-lab\19\Comparable-Mark\Comparable-Mark\obj\Debug\net8.0-windows\Comparable_Mark.Forms.EditStudentForm.resources

@@ -1,12 +1,168 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\comparable-mark\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|solutionrelative:comparable-mark\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|d:\\vsu-labs-git\\5-sem\\csharp\\1-lab\\19\\comparable-mark\\comparable-mark\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|solutionrelative:comparable-mark\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|d:\\vsu-labs-git\\5-sem\\csharp\\1-lab\\19\\comparable-mark\\comparable-mark\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|solutionrelative:comparable-mark\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|d:\\vsu-labs-git\\5-sem\\csharp\\1-lab\\19\\comparable-mark\\comparable-mark\\fileprocessors\\binaryfileprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|solutionrelative:comparable-mark\\fileprocessors\\binaryfileprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|d:\\vsu-labs-git\\5-sem\\csharp\\1-lab\\19\\comparable-mark\\comparable-mark\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|solutionrelative:comparable-mark\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|d:\\vsu-labs-git\\5-sem\\csharp\\1-lab\\19\\comparable-mark\\comparable-mark\\forms\\editstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|solutionrelative:comparable-mark\\forms\\editstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\comparable-mark\\forms\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|solutionrelative:comparable-mark\\forms\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|d:\\vsu-labs-git\\5-sem\\csharp\\1-lab\\19\\comparable-mark\\comparable-mark\\forms\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|solutionrelative:comparable-mark\\forms\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|d:\\vsu-labs-git\\5-sem\\csharp\\1-lab\\19\\comparable-mark\\comparable-mark\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D49ED3AE-2FDC-4E4F-8F16-CA4FF2A19860}|Comparable-Mark\\Comparable-Mark.csproj|solutionrelative:comparable-mark\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BinaryFileProcessor.cs",
+              "DocumentMoniker": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\FileProcessors\\BinaryFileProcessor.cs",
+              "RelativeDocumentMoniker": "Comparable-Mark\\FileProcessors\\BinaryFileProcessor.cs",
+              "ToolTip": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\FileProcessors\\BinaryFileProcessor.cs",
+              "RelativeToolTip": "Comparable-Mark\\FileProcessors\\BinaryFileProcessor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T20:51:18.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Program.cs",
+              "RelativeDocumentMoniker": "Comparable-Mark\\Program.cs",
+              "ToolTip": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Program.cs",
+              "RelativeToolTip": "Comparable-Mark\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T20:49:45.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditStudentForm.cs [Design]",
+              "DocumentMoniker": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\EditStudentForm.cs",
+              "RelativeDocumentMoniker": "Comparable-Mark\\Forms\\EditStudentForm.cs",
+              "ToolTip": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\EditStudentForm.cs [Design]",
+              "RelativeToolTip": "Comparable-Mark\\Forms\\EditStudentForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T20:48:57.647Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddStudentForm.cs",
+              "DocumentMoniker": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\AddStudentForm.cs",
+              "RelativeDocumentMoniker": "Comparable-Mark\\Forms\\AddStudentForm.cs",
+              "ToolTip": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\AddStudentForm.cs",
+              "RelativeToolTip": "Comparable-Mark\\Forms\\AddStudentForm.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwCsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T18:11:09.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "Comparable-Mark\\Models\\Student.cs",
+              "ToolTip": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Models\\Student.cs",
+              "RelativeToolTip": "Comparable-Mark\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T17:22:00.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "Comparable-Mark\\Forms\\MainForm.cs",
+              "ToolTip": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\MainForm.cs",
+              "RelativeToolTip": "Comparable-Mark\\Forms\\MainForm.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwDoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T17:20:40.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "Comparable-Mark\\Forms\\MainForm.cs",
+              "ToolTip": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\MainForm.cs [Design]",
+              "RelativeToolTip": "Comparable-Mark\\Forms\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T17:20:12.833Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "Comparable-Mark\\Forms\\MainForm.Designer.cs",
+              "ToolTip": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\MainForm.Designer.cs",
+              "RelativeToolTip": "Comparable-Mark\\Forms\\MainForm.Designer.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAlwB8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T21:00:01.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddStudentForm.cs [Design]",
+              "DocumentMoniker": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\AddStudentForm.cs",
+              "RelativeDocumentMoniker": "Comparable-Mark\\Forms\\AddStudentForm.cs",
+              "ToolTip": "D:\\VSU-Labs-git\\5-sem\\CSharp\\1-lab\\19\\Comparable-Mark\\Comparable-Mark\\Forms\\AddStudentForm.cs [Design]",
+              "RelativeToolTip": "Comparable-Mark\\Forms\\AddStudentForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T18:11:38.368Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

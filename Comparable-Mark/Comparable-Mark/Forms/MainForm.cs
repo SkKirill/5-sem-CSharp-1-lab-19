@@ -1,24 +1,24 @@
-﻿using Comparable_Mark.FileProcessors;
-using Comparable_Mark.Models;
+﻿using Comparable_Mark.Models;
 
 namespace Comparable_Mark.Forms;
 
 public partial class MainForm : Form
 {
-	private List<Student> students = new List<Student>();
+	private static List<Student> _students = [];
 
 	public MainForm()
 	{
 		InitializeComponent();
+		panelStudents.Location = new Point(0, 0);
+		panelStudents.Size = new Size(Width - 20, Height - 60);
+		panelStudents.AutoScroll = true;
 
 
-		panel1.Location = new Point(0, 0);
-		panel1.Size = new Size(Width - 20, Height - 20);
-		panel1.AutoScroll = true;
 
-		students.Add(
+		_students.Add(
 		new Student()
 		{
+			Id = 1,
 			FullName = $"Скоморохов Кирилл Сергеевич",
 			CourseNumber = 4,
 			GroupNumber = 101,
@@ -27,8 +27,9 @@ public partial class MainForm : Form
 		}
 		);
 
-		students.Add(new Student()
+		_students.Add(new Student()
 		{
+			Id = 2,
 			FullName = $"не Скоморохов Кирилл Сергеевич",
 			CourseNumber = 4,
 			GroupNumber = 101,
@@ -36,7 +37,7 @@ public partial class MainForm : Form
 			Sessions = new Session[Student.COUNT_SESSION]
 		});
 
-		foreach (var student in students)
+		foreach (var student in _students)
 		{
 			for (int i = 0; i < Student.COUNT_SESSION; i++)
 			{
@@ -55,200 +56,226 @@ public partial class MainForm : Form
 			}
 		}
 
-
-
 		DisplayStudents();
 	}
 
-	private void MainForm_Load(object sender, EventArgs e)
+	public void DisplayStudents()
 	{
+		// Очистка главной панели с информацией для перерисовки 
+		panelStudents.Controls.Clear();
 
-	}
+		// Ширина окна на данный момент
+		int FullWidth = panelStudents.Size.Width - 40;
+		// Отступ от самого верха формы и между каждой панелью с информацией о студенте
+		int startHeightPanelStudents = 10;
+		// отступ от левого края
+		int leftWidht = 10;
 
-	private void DisplayStudents()
-	{
-		panel1.Controls.Clear();
-		int y = 10;
-		foreach (var student in students)
+		Panel panelAddNew = CreatePanelAdd(FullWidth, ref startHeightPanelStudents, 5, leftWidht);
+		// Добавляем панель для добавления нового студента
+		panelStudents.Controls.Add(panelAddNew);
+
+		foreach (var student in _students) // для каждого студента из списка отрисовываем
 		{
-			Panel panel = new Panel();
-			panel.AutoScroll = true;
-			panel.Name = student.FullName;
-			panel.Size = new Size(panel1.Size.Width - 30, 280);
-			panel.Location = new Point(5, y);
-			panel.BorderStyle = BorderStyle.FixedSingle;
-
-			Label labelFullName = new Label();
-			labelFullName.AutoSize = true;
-			labelFullName.Text = $"ФИО: {student.FullName.ToString()}";
-			labelFullName.Location = new Point(10, 5);
-
-			Label labelCourse = new Label();
-			labelCourse.Text = "Курс: " + student.CourseNumber.ToString().PadRight(5, ' ') +
-				"Группа: " + student.GroupNumber.ToString().PadRight(8, ' ') +
-				(student.StudyForm == StudyForm.Budget ? "Бюджет" : "Договор");
-			labelCourse.Location = new Point(10, labelFullName.Height + 5);
-			labelCourse.AutoSize = true;
-
-			int start = 55;
-			int weight = 10;
-
-			if (student.Sessions.FirstOrDefault() is not null)
+			// отступ между элементами 
+			int middleHeight = 5;
+			// панель в которой будут храниться все элементы с информацией
+			Panel panelStudent = new()
 			{
-				Label labelExams = new Label();
-				labelExams.Text = "Экзамены:";
-				labelExams.Location = new Point(10, labelFullName.Height + 30);
-				labelExams.AutoSize = true;
+				AutoScroll = true, // добавление возможности прокрутки при изменении размера главного окна
+				Size = new Size(FullWidth, 200),
+				Name = student.Id.ToString(), // название панели будет хранить индивидуальный номер каждого
+											  // студента, по которому его можно будет идентифицировать
+				Location = new Point(leftWidht, startHeightPanelStudents), // расположение левого верхнего угла на panelStudents
+				BorderStyle = BorderStyle.FixedSingle // отрисовка черным по контуру
+			};
 
-				int count = 1;
+			// Первая строчка, которая содержит номер студента (самогенерируемый) и его ФИО
+			Label labelFullName = new()
+			{
+				AutoSize = true,
+				Text = $"{student.Id}  |  ФИО: {student.FullName}",
+				Location = new Point(leftWidht, middleHeight)
+			};
+			middleHeight += 25;
+			panelStudent.Controls.Add(labelFullName); // Добавление этой надписи на panelStudent
 
-				foreach (var session in student.Sessions)
+			// Вторая строка с информацией (курс группа)
+			Label labelCourse = new()
+			{
+				Text = $"Курс: {student.CourseNumber} | Группа: {student.GroupNumber} | {(student.StudyForm == StudyForm.Budget ? "Бюджет" : "Договор")}",
+				Location = new Point(leftWidht, middleHeight),
+				AutoSize = true
+			};
+			middleHeight += 25;
+			panelStudent.Controls.Add(labelCourse);
+
+			middleHeight = CreateExsamList(FullWidth, leftWidht, student, middleHeight, panelStudent);
+
+			Button buttonDelete = new()
+			{
+				Text = "Удалить",
+				Size = new Size(150, 40),
+				Location = new Point(leftWidht, middleHeight)
+			};
+			buttonDelete.Click += (sender, e) => ButtonDeleteClick(panelStudent);
+			panelStudent.Controls.Add(buttonDelete);
+
+			Button buttonEdit = new()
+			{
+				Text = "Редактировать",
+				Size = new Size(150, 40),
+				Location = new Point(180, middleHeight)
+			};
+			buttonEdit.Click += (sender, e) => ButtonDeleteClick(panelStudent);
+			panelStudent.Controls.Add(buttonEdit);
+			middleHeight += 45;
+
+			panelStudent.Size = new Size(FullWidth, middleHeight);
+
+			panelStudents.Controls.Add(panelStudent);
+			startHeightPanelStudents += panelStudent.Size.Height + 10;
+		}
+	}
+	private static int CreateExsamList(int FullWidth, int leftWidht, Student student, int middleHeight, Panel panelStudent)
+	{
+		if (student.Sessions.FirstOrDefault() is not null)
+		{
+			Label labelExams = new()
+			{
+				Text = "Экзамены:",
+				Location = new Point(leftWidht, middleHeight),
+				AutoSize = true
+			};
+			middleHeight += 25;
+			int widthExam = leftWidht;
+			int countSession = 1;
+
+			foreach (var session in student.Sessions)
+			{
+				if (session is null)
 				{
-					if (session is null)
+					continue;
+				}
+
+				Panel panelExs = new()
+				{
+					Name = student.FullName,
+					Size = new Size(250, 125), // Размеры панели под 1 сессию всегда такой
+					Location = new Point(widthExam, middleHeight),
+					BackColor = Color.White,
+					BorderStyle = BorderStyle.FixedSingle,
+					AutoScroll = true
+				};
+				widthExam += 255;
+				if (countSession != Student.COUNT_SESSION && FullWidth - widthExam < 250) // Не хватит место для вывода следущей сессии
+				{
+					middleHeight += 130; // переход на новую строчку 
+					widthExam = leftWidht; // дефолтный отступ
+				}
+
+				Label labelNumber = new()
+				{
+					Text = $"{countSession} сессия:",
+					AutoSize = true
+				};
+				panelExs.Controls.Add(labelNumber);
+
+				int examHeight = 25;
+				foreach (var exam in session.Exams)
+				{
+					if (exam is null)
 					{
 						continue;
 					}
-					Panel panelExs = new Panel();
-					panelExs.Name = student.FullName;
-					panelExs.Size = new Size(250, 125);
-					panelExs.Location = new Point(weight, labelFullName.Height + start);
-					panelExs.BackColor = Color.White;
-					panelExs.BorderStyle = BorderStyle.FixedSingle;
-					panelExs.AutoScroll = true;
 
-					Label labelNumber = new Label();
-					labelNumber.Text = $"{count} сессия: ";
-					labelNumber.AutoSize = true;
+					Label labelExam = new()
+					{
+						Text = exam.Subject,
+						Location = new Point(leftWidht, examHeight),
+						AutoSize = true
+					};
+					panelExs.Controls.Add(labelExam);
 
-					panelExs.Controls.Add(labelNumber);
-					int examY = 25;
-					foreach (var exam in session.Exams)
+					Label labelGrade = new()
 					{
-						if (exam is null)
-						{
-							continue;
-						}
-						Label labelExam = new Label();
-						labelExam.Text = exam.Subject;
-						labelExam.Location = new Point(10, examY);
-						labelExam.AutoSize = true;
-						panelExs.Controls.Add(labelExam);
-						Label labelGrade = new Label();
-						labelGrade.Text = exam.Grade.ToString();
-						labelGrade.Location = new Point(230, examY);
-						labelGrade.AutoSize = true;
-						panelExs.Controls.Add(labelGrade);
-						examY += labelExam.Height + 5;
-					}
-					count++;
-					weight += 250;
-					if (count == 5)
-					{
-						panel.Size = new Size(panel1.Size.Width - 30, 405);
-						start = 55 + 125;
-						weight = 10;
-					}
-					panel.Controls.Add(panelExs);
+						Text = exam.Grade.ToString(),
+						Location = new Point(230, examHeight),
+						AutoSize = true
+					};
+					panelExs.Controls.Add(labelGrade);
+					examHeight += labelExam.Height + 5;
 				}
-				panel.Controls.Add(labelExams);
 
-				start += 125;
+				countSession++;
+				panelStudent.Controls.Add(panelExs);
 			}
+			panelStudent.Controls.Add(labelExams);
+			middleHeight += 130;
+		}
 
-			panel.Controls.Add(labelFullName);
-			panel.Controls.Add(labelCourse);
+		return middleHeight;
+	}
+	private Panel CreatePanelAdd(int FullWidth, ref int startHeightPanelStudents, int middleHeight, int leftWidht)
+	{
+		// Добавляем отрисовку самой первой панели которая будет кнопкой добавления
+		Panel panelAddNew = new()
+		{
+			Size = new Size(FullWidth, 35),
+			Location = new Point(leftWidht, startHeightPanelStudents), // расположение правого верхнего угла на panelStudents
+			BorderStyle = BorderStyle.FixedSingle // отрисовка черным по контуру
+		};
 
-			Button buttonAdd = new Button();
-			buttonAdd.Text = "Удалить";
-			buttonAdd.Size = new Size(150, 40);
-			buttonAdd.Location = new Point(10, labelFullName.Height + start + 15);
-			buttonAdd.Click += (sender, e) =>
-			{
-				// Получаем студента из имени панели 
-				Student studentToRemove = students.FirstOrDefault(s => s.FullName == panel.Name);
-				if (studentToRemove != null)
-				{
-					//TO DO спросить действительно хитим ли удалить
-					// Удаляем студента из списка
-					students.Remove(studentToRemove);
-					// Обновляем отображение
-					DisplayStudents();
-				}
-			};
+		// Делаем обработку события при нажатии на панель
+		panelAddNew.Click += (sender, e) => ButtonAddStudent();
 
+		// Первая строчка, которая содержит номер студента (самогенерируемый) и его ФИО
+		Label labelPlus = new()
+		{
+			AutoSize = true,
+			Text = "+ нажмите, чтобы добавить студента",
+			Location = new Point(leftWidht, middleHeight)
+		};
 
+		// Делаем обработку события при нажатии на надпись пользователем
+		labelPlus.Click += (sender, e) => ButtonAddStudent();
+		panelAddNew.Controls.Add(labelPlus); // Добавление этой надписи на panelAddNew
 
-			Button buttonEdit = new Button();
-			buttonEdit.Text = "Редактировать";
-			buttonEdit.Size = new Size(150, 40);
-			buttonEdit.Location = new Point(180, labelFullName.Height + start + 15);
+		// Меняем стартовый отступ для следующего элемента
+		startHeightPanelStudents += panelAddNew.Size.Height + 10;
+		return panelAddNew;
+	}
 
-			panel.Controls.Add(buttonEdit);
-			panel.Controls.Add(buttonAdd);
+	private void ButtonAddStudent()
+	{
+		AddStudentForm addStudentForm = new(ref _students);
+		addStudentForm.ShowDialog();
+		DisplayStudents();
+	}
 
-			panel1.Controls.Add(panel);
-
-			y += panel.Size.Height + 10;
+	private void ButtonDeleteClick(Panel panel)
+	{
+		// Получаем студента из имени панели 
+		Student studentToRemove = _students.FirstOrDefault(s => s.Id.ToString() == panel.Name);
+		if (studentToRemove != null)
+		{
+			//TO DO спросить действительно хотим ли удалить
+			// Удаляем студента из списка
+			_students.Remove(studentToRemove);
+			// Обновляем отображение
+			DisplayStudents();
 		}
 	}
 
 	private void MainForm_Resize(object sender, EventArgs e)
 	{
-		panel1.Size = new Size(Width - 20, Height - 20);
+		panelStudents.Location = new Point(0, 0);
+		panelStudents.Size = new Size(Width - 20, Height - 60);
 		DisplayStudents();
 	}
 
-	/*private void OpenFileMenuItem_Click(object sender, EventArgs e)
-{
-   OpenFileDialog dialog = new OpenFileDialog();
-   if (dialog.ShowDialog() == DialogResult.OK)
-   {
-	   string filename = dialog.FileName;
-	   string extension = Path.GetExtension(filename);
-	   IFileProcessor processor = null;
-	   switch (extension)
-	   {
-		   case ".xml":
-			   processor = new XmlFileProcessor();
-			   break;
-		   case ".bin":
-			   processor = new BinaryFileProcessor();
-			   break;
-		   case ".txt":
-			   processor = new TextFileProcessor();
-			   break;
-	   }
+	private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+	{
 
-	   if (processor != null)
-	   {
-		   processor.Load(filename);
-		   UpdateListView();
-	   }
-   }
-}
-
-private void ButtonAdd_Click(object sender, EventArgs e)
-{
-   AddStudentForm addForm = new AddStudentForm();
-   if (addForm.ShowDialog() == DialogResult.OK)
-   {
-	   Student newStudent = addForm.GetNewStudent();
-	   object students;
-	   students.Add(newStudent);
-	   UpdateListView();
-   }
-}
-private void UpdateListView()
-{
-   object listView;
-   listView.Items.Clear();
-   foreach (Student student in students)
-   {
-	   ListViewItem item = new ListViewItem(student.FullName);
-	   item.SubItems.Add(student.CourseNumber.ToString());
-	   item.SubItems.Add(student.GroupNumber.ToString());
-	   item.SubItems.Add(student.StudyForm);
-	   listView.Items.Add(item);
-   }
-}*/
+	}
 }
